@@ -1,0 +1,80 @@
+<!--
+  Compact Echo-Sight Cave resource HUD. Uses ASCII-only characters so the
+  UIKitML font atlas emits zero missing-glyph warnings.
+-->
+<style>
+  .hud-card {
+    flex-direction: column;
+    width: 240px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 6px;
+    border-radius: 16px;
+    border-width: 2px;
+    border-color: #14b8ff;
+    background-color: #090d14;
+  }
+
+  .hud-eyebrow {
+    color: #14b8ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .hud-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hud-label {
+    color: #b7c2d0;
+    font-size: 17px;
+  }
+
+  .hud-value {
+    color: #fafaf7;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .hud-status {
+    color: #14b8ff;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+
+  .hud-reset-btn {
+    margin-top: 4px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hud-reset-label {
+    font-size: 14px;
+    font-weight: 700;
+  }
+</style>
+<div class="hud-card">
+  <span class="hud-eyebrow">ECHO RESOURCES</span>
+  <div class="hud-row">
+    <span class="hud-label">Stones</span>
+    <span id="hud-stones" class="hud-value">6</span>
+  </div>
+  <div class="hud-row">
+    <span class="hud-label">Pulses</span>
+    <span id="hud-pulses" class="hud-value">8</span>
+  </div>
+  <div class="hud-row">
+    <span class="hud-label">Crystals</span>
+    <span id="hud-crystals" class="hud-value">0 / 3</span>
+  </div>
+  <span id="hud-status" class="hud-status">READY</span>
+  <Button id="hud-reset" class="hud-reset-btn">
+    <ButtonLabel class="hud-reset-label">Reset Room</ButtonLabel>
+  </Button>
+</div>

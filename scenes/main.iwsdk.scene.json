@@ -1,0 +1,380 @@
+{
+  "version": "iwsdk.scene.v1",
+  "units": "meters",
+  "components": {},
+  "environment": {
+    "toneMapping": "none",
+    "exposure": 1,
+    "shadows": false
+  },
+  "resources": {},
+  "nodes": [
+    {
+      "id": "cave-floor",
+      "name": "Cave Floor",
+      "framingRole": "support",
+      "content": {
+        "type": "asset",
+        "asset": "cave-floor"
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.1,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {},
+        "EchoSurface": {
+          "surfaceType": 0
+        },
+        "PhysicsBody": {
+          "state": "STATIC"
+        },
+        "PhysicsShape": {
+          "shape": "Box",
+          "dimensions": [
+            16,
+            0.2,
+            16
+          ]
+        }
+      }
+    },
+    {
+      "id": "cave-enclosure",
+      "name": "Cave Enclosure",
+      "framingRole": "support",
+      "content": {
+        "type": "asset",
+        "asset": "cave-enclosure"
+      },
+      "components": {
+        "EchoSurface": {
+          "surfaceType": 0
+        },
+        "PhysicsBody": {
+          "state": "STATIC"
+        },
+        "PhysicsShape": {
+          "shape": "TriMesh"
+        }
+      }
+    },
+    {
+      "id": "stone-altar",
+      "name": "Stone Altar",
+      "framingRole": "support",
+      "content": {
+        "type": "asset",
+        "asset": "cave-altar"
+      },
+      "transform": {
+        "position": [
+          0,
+          0.41,
+          -0.75
+        ]
+      },
+      "components": {
+        "EchoSurface": {
+          "surfaceType": 0
+        },
+        "PhysicsBody": {
+          "state": "STATIC"
+        },
+        "PhysicsShape": {
+          "shape": "Box",
+          "dimensions": [
+            0.7,
+            0.82,
+            0.45
+          ]
+        }
+      }
+    },
+    {
+      "id": "stone-1",
+      "name": "Echo Stone 1",
+      "content": {
+        "type": "asset",
+        "asset": "cave-stone"
+      },
+      "transform": {
+        "position": [
+          -0.14,
+          0.88,
+          -0.75
+        ]
+      },
+      "components": {
+        "EchoStone": {
+          "stoneId": 1
+        },
+        "OneHandGrabbable": {},
+        "RayInteractable": {},
+        "PhysicsBody": {
+          "state": "DYNAMIC"
+        },
+        "PhysicsShape": {
+          "shape": "Sphere",
+          "dimensions": [
+            0.055,
+            0,
+            0
+          ],
+          "restitution": 0.35,
+          "friction": 0.6,
+          "density": 2.2
+        }
+      }
+    },
+    {
+      "id": "stone-2",
+      "name": "Echo Stone 2",
+      "content": {
+        "type": "asset",
+        "asset": "cave-stone"
+      },
+      "transform": {
+        "position": [
+          0.14,
+          0.88,
+          -0.75
+        ]
+      },
+      "components": {
+        "EchoStone": {
+          "stoneId": 2
+        },
+        "OneHandGrabbable": {},
+        "RayInteractable": {},
+        "PhysicsBody": {
+          "state": "DYNAMIC"
+        },
+        "PhysicsShape": {
+          "shape": "Sphere",
+          "dimensions": [
+            0.055,
+            0,
+            0
+          ],
+          "restitution": 0.35,
+          "friction": 0.6,
+          "density": 2.2
+        }
+      }
+    },
+    {
+      "id": "crystal-1",
+      "name": "Echo Crystal 1",
+      "content": {
+        "type": "asset",
+        "asset": "cave-crystal"
+      },
+      "transform": {
+        "position": [
+          -4.2,
+          0,
+          -2.6
+        ]
+      },
+      "components": {
+        "EchoCrystal": {
+          "crystalId": "crystal-1"
+        },
+        "EchoSurface": {
+          "surfaceType": 1
+        }
+      }
+    },
+    {
+      "id": "crystal-2",
+      "name": "Echo Crystal 2",
+      "content": {
+        "type": "asset",
+        "asset": "cave-crystal"
+      },
+      "transform": {
+        "position": [
+          4.2,
+          0,
+          -3.4
+        ]
+      },
+      "components": {
+        "EchoCrystal": {
+          "crystalId": "crystal-2"
+        },
+        "EchoSurface": {
+          "surfaceType": 1
+        }
+      }
+    },
+    {
+      "id": "crystal-3",
+      "name": "Echo Crystal 3",
+      "content": {
+        "type": "asset",
+        "asset": "cave-crystal"
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          -6.0
+        ]
+      },
+      "components": {
+        "EchoCrystal": {
+          "crystalId": "crystal-3"
+        },
+        "EchoSurface": {
+          "surfaceType": 1
+        }
+      }
+    },
+    {
+      "id": "recharge-1",
+      "name": "Echo Recharge Node",
+      "content": {
+        "type": "asset",
+        "asset": "cave-recharge"
+      },
+      "transform": {
+        "position": [
+          3.8,
+          0,
+          1.5
+        ]
+      },
+      "components": {
+        "RechargeNode": {
+          "stones": 3,
+          "pulses": 4
+        },
+        "EchoSurface": {
+          "surfaceType": 0
+        }
+      }
+    },
+    {
+      "id": "hazard-1",
+      "name": "Echo Hazard Zone 1",
+      "content": {
+        "type": "asset",
+        "asset": "cave-hazard"
+      },
+      "transform": {
+        "position": [
+          -2.2,
+          0,
+          -4.0
+        ]
+      },
+      "components": {
+        "HazardZone": {
+          "radius": 1.15
+        },
+        "EchoSurface": {
+          "surfaceType": 2
+        }
+      }
+    },
+    {
+      "id": "hazard-2",
+      "name": "Echo Hazard Zone 2",
+      "content": {
+        "type": "asset",
+        "asset": "cave-hazard"
+      },
+      "transform": {
+        "position": [
+          2.0,
+          0,
+          -5.0
+        ]
+      },
+      "components": {
+        "HazardZone": {
+          "radius": 1.15
+        },
+        "EchoSurface": {
+          "surfaceType": 2
+        }
+      }
+    },
+    {
+      "id": "exit-gate",
+      "name": "Cave Exit Gate",
+      "content": {
+        "type": "asset",
+        "asset": "cave-exit-gate"
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          -7.2
+        ]
+      },
+      "components": {
+        "ExitGate": {
+          "radius": 1.5
+        },
+        "EchoSurface": {
+          "surfaceType": 1
+        }
+      }
+    },
+    {
+      "id": "welcome-panel",
+      "name": "Welcome Panel",
+      "content": {
+        "type": "asset",
+        "asset": "welcome-panel"
+      },
+      "transform": {
+        "position": [
+          0,
+          1.9,
+          -4.4
+        ],
+        "rotationDeg": [
+          -6,
+          0,
+          0
+        ],
+        "scale": 0.45
+      },
+      "components": {
+        "RayInteractable": {}
+      }
+    },
+    {
+      "id": "hud-panel",
+      "name": "Resource HUD",
+      "content": {
+        "type": "asset",
+        "asset": "hud-panel"
+      },
+      "transform": {
+        "position": [
+          -1.2,
+          1.15,
+          -1.1
+        ],
+        "rotationDeg": [
+          0,
+          35,
+          0
+        ],
+        "scale": 0.32
+      },
+      "components": {
+        "RayInteractable": {}
+      }
+    }
+  ]
+}
